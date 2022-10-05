@@ -19,7 +19,7 @@ class _OverviewPage extends State<OverviewPage> {
       drawer: NavPanel(),
       appBar: AppBar(
         title: Text(
-          "Overview Page",
+          "Overview",
           style: TextStyle(color: NeonStyles.fontColor),
         ),
         backgroundColor: NeonStyles.secondaryColor,

@@ -4,14 +4,16 @@ import 'package:go_router/go_router.dart';
 import 'package:neon/style/style.dart';
 import 'package:neon/widgets/navigationSidePanel.dart';
 
-class SkillPage extends StatefulWidget {
-  const SkillPage({super.key});
+// The page where users can select a character sheet;
+
+class SelectPage extends StatefulWidget {
+  const SelectPage({super.key});
 
   @override
-  State<SkillPage> createState() => _SkillPage();
+  State<SelectPage> createState() => _SelectPage();
 }
 
-class _SkillPage extends State<SkillPage> {
+class _SelectPage extends State<SelectPage> {
   @override
   Widget build(BuildContext context) {
     final screenWidth = MediaQuery.of(context).size.width;
@@ -19,7 +21,7 @@ class _SkillPage extends State<SkillPage> {
       drawer: NavPanel(),
       appBar: AppBar(
         title: Text(
-          "Skills",
+          "Select Character Sheet",
           style: TextStyle(color: NeonStyles.fontColor),
         ),
         backgroundColor: NeonStyles.secondaryColor,
@@ -28,8 +30,9 @@ class _SkillPage extends State<SkillPage> {
       backgroundColor: NeonStyles.primaryColor,
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          print("hi");
+          print("implement create character sheet");
         },
+        child: Icon(Icons.add),
       ),
     );
   }

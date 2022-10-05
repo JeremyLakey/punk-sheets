@@ -19,7 +19,7 @@ class _HealthPage extends State<HealthPage> {
       drawer: NavPanel(),
       appBar: AppBar(
         title: Text(
-          "Overview Page",
+          "Health",
           style: TextStyle(color: NeonStyles.fontColor),
         ),
         backgroundColor: NeonStyles.secondaryColor,

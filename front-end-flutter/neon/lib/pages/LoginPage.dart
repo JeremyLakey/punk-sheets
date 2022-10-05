@@ -24,7 +24,7 @@ class _LoginPage extends State<LoginPage> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "Neon Citizens",
+          "Login",
           style: TextStyle(color: NeonStyles.fontColor),
         ),
         backgroundColor: NeonStyles.secondaryColor,

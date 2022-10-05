@@ -19,7 +19,7 @@ class _WeaponPage extends State<WeaponPage> {
       drawer: NavPanel(),
       appBar: AppBar(
         title: Text(
-          "Overview Page",
+          "Weapons",
           style: TextStyle(color: NeonStyles.fontColor),
         ),
         backgroundColor: NeonStyles.secondaryColor,

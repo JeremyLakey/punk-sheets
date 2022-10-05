@@ -5,6 +5,7 @@ import 'package:neon/pages/LoginPage.dart';
 import 'package:neon/pages/HealthPage.dart';
 import 'package:neon/pages/SkillsPage.dart';
 import 'package:neon/pages/WeaponsPage.dart';
+import 'package:neon/pages/SelectPage.dart';
 
 void main() {
   runApp(NeonCitizensApp());
@@ -19,7 +20,8 @@ class NeonCitizensApp extends StatelessWidget {
         path: '/overview', builder: (context, state) => const OverviewPage()),
     GoRoute(path: '/weapon', builder: (contest, state) => const WeaponPage()),
     GoRoute(path: '/health', builder: (context, state) => const HealthPage()),
-    GoRoute(path: '/skill', builder: ((context, state) => const SkillPage()))
+    GoRoute(path: '/skill', builder: ((context, state) => const SkillPage())),
+    GoRoute(path: '/select', builder: (context, state) => const SelectPage()),
   ]);
 
   // This widget is the root of your application.
