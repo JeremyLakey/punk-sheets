@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+
+import 'package:neon/style/style.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -8,6 +11,13 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPage extends State<LoginPage> {
+  void onSubmit() {
+    if (context != null) {
+      print("hell0");
+      GoRouter.of(context).go('/overview');
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     final screenWidth = MediaQuery.of(context).size.width;
@@ -15,11 +25,11 @@ class _LoginPage extends State<LoginPage> {
       appBar: AppBar(
         title: Text(
           "Neon Citizens",
-          style: TextStyle(color: Colors.blueAccent),
+          style: TextStyle(color: NeonStyles.fontColor),
         ),
-        backgroundColor: Colors.yellowAccent,
+        backgroundColor: NeonStyles.secondaryColor,
       ),
-      backgroundColor: Colors.yellow,
+      backgroundColor: NeonStyles.primaryColor,
       body: Center(
           child: Container(
               constraints: BoxConstraints(minWidth: 100, maxWidth: 500),
@@ -45,9 +55,7 @@ class _LoginPage extends State<LoginPage> {
                       padding: EdgeInsets.symmetric(vertical: 10),
                       child: TextButton(
                         child: Text("Submit"),
-                        onPressed: () {
-                          print("Here");
-                        },
+                        onPressed: onSubmit,
                       ))
                 ],
               ))),

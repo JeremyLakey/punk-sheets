@@ -1,18 +1,27 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:neon/pages/OverviewPage.dart';
 import 'pages/LoginPage.dart';
 
 void main() {
-  runApp(const NeonCitizensApp());
+  runApp(NeonCitizensApp());
 }
 
 class NeonCitizensApp extends StatelessWidget {
-  const NeonCitizensApp({super.key});
+  NeonCitizensApp({super.key});
+
+  final GoRouter _router = GoRouter(routes: <GoRoute>[
+    GoRoute(path: '/', builder: (context, state) => const LoginPage()),
+    GoRoute(
+        path: '/overview', builder: (context, state) => const OverviewPage())
+  ]);
 
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       title: 'Flutter Demo',
+      routerConfig: _router,
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -25,7 +34,6 @@ class NeonCitizensApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const LoginPage(),
     );
   }
 }
