@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:neon/pages/OverviewPage.dart';
-import 'pages/LoginPage.dart';
+import 'package:neon/pages/LoginPage.dart';
+import 'package:neon/pages/HealthPage.dart';
+import 'package:neon/pages/SkillsPage.dart';
+import 'package:neon/pages/WeaponsPage.dart';
 
 void main() {
   runApp(NeonCitizensApp());
@@ -13,7 +16,10 @@ class NeonCitizensApp extends StatelessWidget {
   final GoRouter _router = GoRouter(routes: <GoRoute>[
     GoRoute(path: '/', builder: (context, state) => const LoginPage()),
     GoRoute(
-        path: '/overview', builder: (context, state) => const OverviewPage())
+        path: '/overview', builder: (context, state) => const OverviewPage()),
+    GoRoute(path: '/weapon', builder: (contest, state) => const WeaponPage()),
+    GoRoute(path: '/health', builder: (context, state) => const HealthPage()),
+    GoRoute(path: '/skill', builder: ((context, state) => const SkillPage()))
   ]);
 
   // This widget is the root of your application.
