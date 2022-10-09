@@ -15,22 +15,6 @@ class _HealthPage extends State<HealthPage> {
   @override
   Widget build(BuildContext context) {
     final screenWidth = MediaQuery.of(context).size.width;
-    return Scaffold(
-      drawer: NavPanel(),
-      appBar: AppBar(
-        title: Text(
-          "Health",
-          style: TextStyle(color: NeonStyles.fontColor),
-        ),
-        backgroundColor: NeonStyles.secondaryColor,
-        iconTheme: IconThemeData(color: NeonStyles.fontColor),
-      ),
-      backgroundColor: NeonStyles.primaryColor,
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          print("hi");
-        },
-      ),
-    );
+    return Container(child: Text("Health Page"));
   }
 }

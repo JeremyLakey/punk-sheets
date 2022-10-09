@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:neon/pages/OverviewPage.dart';
+import 'package:get_it/get_it.dart';
+
+import 'package:neon/pages/CharacterPage.dart';
 import 'package:neon/pages/LoginPage.dart';
-import 'package:neon/pages/HealthPage.dart';
-import 'package:neon/pages/SkillsPage.dart';
-import 'package:neon/pages/WeaponsPage.dart';
+import 'package:neon/pages/characterTabs/HealthPage.dart';
+import 'package:neon/pages/characterTabs/SkillsPage.dart';
+import 'package:neon/pages/characterTabs/WeaponsPage.dart';
 import 'package:neon/pages/SelectPage.dart';
+
+final getIt = GetIt.instance;
 
 void main() {
   runApp(NeonCitizensApp());
@@ -17,10 +21,7 @@ class NeonCitizensApp extends StatelessWidget {
   final GoRouter _router = GoRouter(routes: <GoRoute>[
     GoRoute(path: '/', builder: (context, state) => const LoginPage()),
     GoRoute(
-        path: '/overview', builder: (context, state) => const OverviewPage()),
-    GoRoute(path: '/weapon', builder: (contest, state) => const WeaponPage()),
-    GoRoute(path: '/health', builder: (context, state) => const HealthPage()),
-    GoRoute(path: '/skill', builder: ((context, state) => const SkillPage())),
+        path: '/overview', builder: (context, state) => const CharacterPage()),
     GoRoute(path: '/select', builder: (context, state) => const SelectPage()),
   ]);
 

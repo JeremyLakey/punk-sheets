@@ -15,22 +15,6 @@ class _SkillPage extends State<SkillPage> {
   @override
   Widget build(BuildContext context) {
     final screenWidth = MediaQuery.of(context).size.width;
-    return Scaffold(
-      drawer: NavPanel(),
-      appBar: AppBar(
-        title: Text(
-          "Skills",
-          style: TextStyle(color: NeonStyles.fontColor),
-        ),
-        backgroundColor: NeonStyles.secondaryColor,
-        iconTheme: IconThemeData(color: NeonStyles.fontColor),
-      ),
-      backgroundColor: NeonStyles.primaryColor,
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          print("hi");
-        },
-      ),
-    );
+    return Container(child: Text("Skills Page"));
   }
 }
