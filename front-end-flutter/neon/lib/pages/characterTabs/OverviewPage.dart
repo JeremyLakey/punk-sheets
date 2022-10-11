@@ -15,6 +15,9 @@ class _OverviewPage extends State<OverviewPage> {
   @override
   Widget build(BuildContext context) {
     final screenWidth = MediaQuery.of(context).size.width;
-    return Container(child: Text("Overview Page"));
+    return Container(
+      child: Text("Overview Page"),
+      color: NeonStyles.primaryColor,
+    );
   }
 }

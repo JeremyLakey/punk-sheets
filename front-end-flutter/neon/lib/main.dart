@@ -4,14 +4,15 @@ import 'package:get_it/get_it.dart';
 
 import 'package:neon/pages/CharacterPage.dart';
 import 'package:neon/pages/LoginPage.dart';
-import 'package:neon/pages/characterTabs/HealthPage.dart';
-import 'package:neon/pages/characterTabs/SkillsPage.dart';
-import 'package:neon/pages/characterTabs/WeaponsPage.dart';
 import 'package:neon/pages/SelectPage.dart';
+import 'package:neon/pages/selectPageWidgets/CreateCharacter.dart';
+import 'package:neon/state/characterState.dart';
 
 final getIt = GetIt.instance;
 
 void main() {
+  getIt.registerSingleton(CharacterState(), signalsReady: true);
+
   runApp(NeonCitizensApp());
 }
 
@@ -23,6 +24,7 @@ class NeonCitizensApp extends StatelessWidget {
     GoRoute(
         path: '/overview', builder: (context, state) => const CharacterPage()),
     GoRoute(path: '/select', builder: (context, state) => const SelectPage()),
+    GoRoute(path: '/create', builder: (context, state) => CreateCharacter()),
   ]);
 
   // This widget is the root of your application.

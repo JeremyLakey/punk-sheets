@@ -15,6 +15,7 @@ class _SkillPage extends State<SkillPage> {
   @override
   Widget build(BuildContext context) {
     final screenWidth = MediaQuery.of(context).size.width;
-    return Container(child: Text("Skills Page"));
+    return Container(
+        child: Text("Skills Page"), color: NeonStyles.primaryColor);
   }
 }

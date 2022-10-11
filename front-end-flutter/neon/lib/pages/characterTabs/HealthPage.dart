@@ -15,6 +15,7 @@ class _HealthPage extends State<HealthPage> {
   @override
   Widget build(BuildContext context) {
     final screenWidth = MediaQuery.of(context).size.width;
-    return Container(child: Text("Health Page"));
+    return Container(
+        child: Text("Health Page"), color: NeonStyles.primaryColor);
   }
 }

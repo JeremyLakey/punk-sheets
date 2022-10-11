@@ -31,6 +31,8 @@ class _SelectPage extends State<SelectPage> {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           print("implement create character sheet");
+
+          GoRouter.of(context).go('/create');
         },
         child: Icon(Icons.add),
       ),

@@ -14,7 +14,7 @@ class _LoginPage extends State<LoginPage> {
   void onSubmit() {
     if (context != null) {
       print("hell0");
-      GoRouter.of(context).go('/overview');
+      GoRouter.of(context).go('/select');
     }
   }
 
